@@ -7,7 +7,7 @@ on:
   pull_request:
 
 jobs:
-  unit:
+  tests:
     name: Integration tests - PHP ${{ matrix.php }}
     strategy:
       matrix:
@@ -26,8 +26,5 @@ jobs:
       - name: Install Composer dependencies
         run: composer install --no-progress --prefer-dist --optimize-autoloader
 
-      - name: Setup integration environment
-        run: composer integration-setup
-
-      - name: Run integration tests
+      - name: Run tests
         run: composer test
