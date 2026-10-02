@@ -33,7 +33,9 @@
         }
     },
     "require": {
-        "php": "^8.4"
+        "php": "^8.4",
+        "symfony/http-client": "*",
+        "symfony/webhook": "*"
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^3.95",
